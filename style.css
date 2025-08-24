@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  min-height: 100vh;
+  width: 100%;
+  font-size: clamp(14px, 2vw, 18px);
+}
+
+.background-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  background-image:
+    linear-gradient(to right, #f0f0f0 1px, transparent 1px),
+    linear-gradient(to bottom, #f0f0f0 1px, transparent 1px),
+    radial-gradient(circle 800px at 0% 200px, #d5c5ff, transparent);
+  background-size: 96px 64px, 96px 64px, 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn,
+#sub_btn {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.nav {
+  position: absolute;
+  top: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 100vw;
+}
+
+.nav h1 {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-weight: 700;
+}
+
+.aurora-background {
+  background: radial-gradient(ellipse 80% 60% at 5% 40%, rgba(175, 109, 255, 0.48), transparent 67%),
+    radial-gradient(ellipse 70% 60% at 45% 45%, rgba(255, 100, 180, 0.41), transparent 67%),
+    radial-gradient(ellipse 62% 52% at 83% 76%, rgba(255, 235, 170, 0.44), transparent 63%),
+    radial-gradient(ellipse 60% 48% at 75% 20%, rgba(120, 190, 255, 0.36), transparent 66%),
+    linear-gradient(45deg, #f7eaff 0%, #fde2ea 100%);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: min(90%, 600px);
+  height: auto;
+  padding: 2rem 1rem;
+  border-radius: 2rem;
+  background-color: #faa307;
+  z-index: 0;
+}
+
+.container h1 {
+  position: absolute;
+  top: 10px;
+}
+
+#topBtn {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: 10rem;
+}
+
+.messageBox {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: #F7E9FD;
+  width: 90%;
+  max-width: 410px;
+  min-height: 135px;
+  border-radius: 1rem;
+  position: absolute;
+  top: 40px;
+  box-shadow: 0.3em 0.3em 1em lightslategrey;
+}
+
+.messageBox p {
+  padding: 1rem;
+  font-weight: 400;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  line-height: 1.4;
+}
+
+#topBtn div {
+  border: none;
+  background-color: #F7E9FD;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  box-shadow: 0.3em 0.3em 1em lightslategrey;
+  min-width: 120px;
+  width: 200px;
+}
+
+#attempt p {
+  padding: 3px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+#mode p {
+  font-size: 1rem;
+  padding: 2px;
+  font-weight: 400;
+  text-align: center;
+  cursor: pointer;
+}
+
+#inputDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 420px;
+  gap: 0.5rem;
+}
+
+#inputDiv input {
+  width: 100%;
+  max-width: 200px;
+  min-width: 120px;
+  height: 40px;
+  padding: 4px;
+  margin: 8px 0px;
+  border: none;
+  border-radius: 6px;
+  background-color: #F7E9FD;
+  box-shadow: 0.3em 0.3em 1em lightslategrey;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+#sub_btn {
+  width: 100%;
+  max-width: 200px;
+  min-width: 120px;
+  height: 40px;
+  padding: 4px;
+  border-radius: 0.5rem;
+  border: none;
+  margin: 8px 0px;
+  background-color: #F7E9FD;
+  box-shadow: 0.3em 0.3em 1em lightslategrey;
+  cursor: pointer;
+}
+
+#res_btn {
+  width: 90%;
+  max-width: 410px;
+  height: 50px;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #F7E9FD;
+  box-shadow: 0.3em 0.3em 1em lightslategrey;
+  cursor: pointer;
+}
+
+#res_btn:active {
+  background-color: grey;
+}
+
+#sub_btn:active {
+  background-color: grey;
+}
+
+/* --- Responsive Media Queries --- */
+
+@media (max-width: 500px) {
+  .nav{
+    justify-content: start;
+  }
+ 
+  #inputDiv{
+    gap: 0rem;
+    flex-direction: column;
+  }
+
+  #inputDiv input{
+    margin: 8px 0px 0px;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .nav h1 {
+    font-size: 1.9rem;
+  }
+
+  .container {
+    border-radius: 1rem;
+    padding: 1.5rem;
+  }
+
+  #res_btn {
+    font-size: 1rem;
+  }
+
+  .messageBox{
+  top: 35px;
+}
+
+}
+
+@media (max-width: 1024px) {
+  .messageBox {
+    width: 80%;
+  }
+}
+
+/* --- Dark/Light Mode (Unchanged) --- */
+body.dark .background-grid {
+  background: #003049;
+  transition: background 1s;
+}
+
+body.dark h1 {
+  color: #fca311;
+}
+
+.toggle-checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+label[for="toggle"] {
+  position: absolute;
+  top: 0.5em;
+  right: 1em;
+  z-index: 100;
+}
+
+.toggle-slot {
+  position: relative;
+  height: 2.5em;
+  width: 5em;
+  border: 0.2em solid #e4e7ec;
+  border-radius: 2.5em;
+  background-color: white;
+  box-shadow: 0 0.2em 0.5em #e4e7ec;
+  transition: background-color 250ms, border-color 250ms;
+}
+
+.toggle-checkbox:checked ~ .toggle-slot {
+  background-color: #003049;
+  border-color: #003049;
+}
+
+.toggle-button {
+  position: absolute;
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  background-color: #caf0f8;
+  transition: transform 500ms cubic-bezier(.26,2,.46,.71);
+  z-index: 3;
+  transform: translate(0.2em, 0.05em);
+}
+
+.toggle-checkbox:checked ~ .toggle-slot .toggle-button {
+  transform: translate(2.6em, 0.09em);
+}
+
+.toggle-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.7em;
+  height: 0.7em;
+  background: #ff7b00;
+  border-radius: 50%;
+}
+
+.sun-icon-wrapper,
+.moon-icon-wrapper {
+  position: absolute;
+  height: 1.5em;
+  width: 1.5em;
+  z-index: 2;
+  transition: transform 500ms cubic-bezier(.26,2,.46,.71);
+}
+
+.sun-icon-wrapper {
+  transform: translate(2.8em, 0.5em) rotate(15deg);
+  transform-origin: 50% 50%;
+}
+
+.moon-icon-wrapper {
+  transform: translate(0.5em, 0.5em) rotate(0deg);
+  transform-origin: 50% 50%;
+}
+
+.toggle-checkbox:checked ~ .toggle-slot .sun-icon-wrapper {
+  transform: translate(3.3em, 0.5em) rotate(0deg);
+}
+
+.toggle-checkbox:checked ~ .toggle-slot .moon-icon-wrapper {
+  transform: translate(0.8em, 0.5em) rotate(-15deg);
+}
+
+.sun-icon,
+.moon-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.sun-icon {
+  color: #374151;
+}
+
+.moon-icon {
+  color: white;
+}
+
+/* Add stars to moon */
+.moon-icon-wrapper::before,
+.moon-icon-wrapper::after,
+.moon-icon-wrapper .extra-star {
+  content: '';
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  z-index: 2;
+}
+
+.moon-icon-wrapper::before {
+  width: 0.15em;
+  height: 0.15em;
+  top: -0.3em;
+  left: 1.2em;
+}
+
+.moon-icon-wrapper::after {
+  width: 0.2em;
+  height: 0.2em;
+  bottom: -0.2em;
+  top: 1.2em;
+  left: 0.1em;
+}
+
+.moon-icon-wrapper .extra-star {
+  width: 0.15em;
+  height: 0.15em;
+  top: 0.2em;
+  left: 1.8em;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="btn-style.css">
+    <title>Number Guessing Game</title>
+</head>
+<body>
+<div class="background-grid">
+    
+    <!-- btn -->
+     <label for="toggle">
+        <input class="toggle-checkbox" type="checkbox" id="toggle" >
+        <div class="toggle-slot">
+            <div class="moon-icon-wrapper">
+                <iconify-icon class="moon-icon" icon="feather:moon"></iconify-icon>
+                <div class="extra-star"></div>
+            </div>
+            <div class="toggle-button"></div>
+            <div class="sun-icon-wrapper">
+                <iconify-icon class="sun-icon" icon="feather:sun"></iconify-icon>
+            </div>
+        </div>
+    </label>
+
+    <!--  -->
+    <div class="nav">
+     
+     <h1>Number Guessing Game</h1>
+    </div>
+
+    <div class="container aurora-background">
+    
+        <div class="messageBox">
+            <p id="msgBox">Guess the number from 1 to 10. And you have only 3 guesses</p>
+        </div>
+         <div id="topBtn"><div id="attempt"><p id="attempts">Attempts: 0 of 3</p></div><div id="mode"><p id="modePara">Easy 😀</p></div></div>
+         <div id="inputDiv"><input class="input"  type="number"><button type="submit" id="sub_btn" class="btn" onclick="sub()">Submit</button></div>  
+         <button type="reset" id="res_btn" class="btn" onclick="tryAgain()">Play again</button>
+    </div>
+    
+     </div>
+    <script src="script.js"></script>
+</body>
+</html>
